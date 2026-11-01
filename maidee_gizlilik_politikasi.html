@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maidee | Gizlilik Politikası</title><meta name="description" content="Maidee mobil uygulaması gizlilik politikası">
+<style>
+:root{--bg:#f3f7f3;--ink:#223a2d;--muted:#526559;--line:#dae6dc;--green:#176e48;--warn:#fff2cb}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+header{background:#174a35;color:white;padding:44px 20px 64px} .wrap{max-width:860px;margin:auto}h1{font-size:clamp(30px,5vw,44px);margin:8px 0}header p{color:#e1f1e8}
+main{background:white;border:1px solid var(--line);border-radius:18px;margin:-26px auto 44px;padding:clamp(20px,5vw,48px);position:relative}h2{font-size:21px;line-height:1.4;margin:34px 0 10px}h3{font-size:17px;margin:18px 0 6px}p,li{margin:8px 0}a{color:var(--green)}.note{background:var(--warn);border-left:4px solid #b9891c;border-radius:8px;padding:12px 16px;margin:20px 0}.placeholder{background:#fff0bc;padding:1px 5px;border-radius:4px;font-weight:650}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:#eaf3eb}footer{color:var(--muted);text-align:center;padding:0 16px 36px;font-size:14px}nav a{margin-right:12px;display:inline-block}
+</style>
+</head><body>
+<header><div class="wrap"><div style="font-weight:700;letter-spacing:.16em">MAIDEE</div><h1>Gizlilik Politikası</h1><p>Yemek planlama, buzdolabı fotoğrafı analizi ve kişiselleştirilmiş tarif önerileri</p></div></header>
+<main class="wrap">
+<p><strong>Son güncelleme:</strong> <span class="placeholder">[YAYIN TARİHİNİ GİRİN]</span></p>
+<p><strong>Veri sorumlusu / geliştirici:</strong> <span class="placeholder">Geliştirici3535 (Play Console görünen adı; veri sorumlusu ayrıca doğrulanacak)</span><br><strong>İletişim:</strong> <span class="placeholder">maidee.info@gmail.com</span></p>
+<div class="note"><strong>Yayımlamadan önce:</strong> Sarı işaretli alanları tamamlayın; reklam, abonelik, Gemini ve saklama ayarlarını doğrulayın. Bu açıklama mevcut kod incelemesine dayalı bir taslaktır; canlı ortamda etkin olmayan özellikler için öngörülen işlemleri fiilen yürütülüyormuş gibi göstermeyin.</div>
+<nav aria-label="İçindekiler"><a href="#veriler">Veriler</a><a href="#ai">Yapay zekâ</a><a href="#saglik">Sağlık tercihleri</a><a href="#saklama">Saklama ve silme</a><a href="#haklar">Haklar</a></nav>
+<h2 id="amac">1. Uygulama ve kapsam</h2>
+<p>Maidee, kullanıcıların mevcut malzemelerine ve seçtikleri yemek/beslenme tercihlerine göre tarifler, günlük ve haftalık menüler ve alışveriş listeleri hazırlamasına yardımcı olan bir mobil uygulamadır. Bu politika, Maidee'nin uygulama içinde eriştiği, cihazda sakladığı ve hizmet sunumu için dış sistemlere gönderdiği verilerin işlenmesini açıklar.</p>
+<h2 id="veriler">2. Erişilen ve işlenen veriler</h2>
+<table><thead><tr><th>Veri kategorisi</th><th>Nasıl işlenir?</th></tr></thead><tbody>
+<tr><td>Yerel profil</td><td>Ad, yaş, boy, kilo, meslek, serbest metin sağlık notu ve profil fotoğrafı kullanıcı tarafından girilirse cihazdaki uygulama tercih alanında (SharedPreferences) saklanır. İncelenen kodda bu alanların veya profil fotoğrafının yapay zekâ isteğine eklendiği görülmemiştir.</td></tr>
+<tr><td>Beslenme tercihleri</td><td>Vejetaryenlik, yüksek protein, kişi sayısı, mutfak tercihleri, istenmeyen malzemeler ve seçilmiş sağlıkla ilgili tercihler cihazda saklanır. Yapay zekâ kullanıldığında ilgili tercihler öneriyi kişiselleştirmek amacıyla sunucuya ve Gemini hizmetine gönderilebilir.</td></tr>
+<tr><td>Malzeme bilgileri</td><td>Yazılan malzemeler, tarif ve menü üretimi için yapay zekâ isteklerine eklenir.</td></tr>
+<tr><td>Buzdolabı fotoğrafı</td><td>Kullanıcı fotoğraf özelliğini seçtiğinde fotoğraf alınır/seçilir, sıkıştırılır ve görseldeki malzemeleri tanımak için uygulama sunucusuna ve oradan Gemini API'ye gönderilir. İncelenen uygulama kodunda kalıcı fotoğraf arşivine kaydetme görülmemiştir. İşletim sistemi/eklenti geçici dosyaları ayrıca oluşabilir.</td></tr>
+<tr><td>Menüler ve favoriler</td><td>Oluşturulan menüler, alışveriş listeleri, işaretlemeler ve favoriler cihazda saklanır; AI üretim sürecine gönderilen bilgiler öneri oluşturmak için işlenebilir.</td></tr>
+<tr><td>Uygulama doğrulama verileri</td><td>Firebase App Check / Play Integrity doğrulamaları kapsamında token ve teknik cihaz/uygulama sinyalleri Google servisleriyle işlenebilir. Tam kapsam ve saklama süresi ilgili sağlayıcı ve proje ayarlarına bağlıdır.</td></tr>
+</tbody></table>
+<h2 id="ai">3. Yapay zekâ ve fotoğraf aktarımı</h2>
+<p>Yapay zekâ özelliği etkinse kullanıcı tarafından girilen malzemeler ve uygun tercih alanları, Maidee backend hizmetine, ardından Google Gemini API'ye aktarılır. Fotoğraf tanıma kullanıldığında sıkıştırılmış fotoğraf da bu aktarımın parçasıdır. Amaç malzeme tanıma, tarif ve menü önerileri üretmektir. Profilde girilen serbest metin sağlık notunun AI isteğine eklendiği kod incelemesinde görülmemiştir.</p>
+<p><strong>Altyapı:</strong> Kodda Cloud Run üzerinden çalışan backend ve Google Gemini entegrasyonu tanımlanmıştır. <span class="placeholder">[CANLI BACKEND / GEMINI SAĞLAYICISI, BÖLGE, İŞLEME VE SAKLAMA AYARLARINI DOĞRULAYIN]</span></p>
+<p>İncelenen backend istek gövdelerini uygulama düzeyinde kaydetmemektedir. Bununla birlikte Gemini/Google Cloud tarafındaki günlükleme, saklama ve silme süreleri henüz doğrulanmamıştır; bu nedenle aktarılan verilerin anında silindiği söylenemez.</p>
+<h2 id="saglik">4. Sağlıkla ilgili beslenme tercihleri</h2>
+<p>Kullanıcı; diyabet, gluten hassasiyeti, Akdeniz anemisi veya ülseratif kolit gibi sağlıkla ilişkili seçenekleri isteğe bağlı olarak belirleyebilir. Bu seçimler beslenme önerilerini uyarlamak için işlenir ve yapay zekâ önerisi istendiğinde aktarılabilir. Kullanıcı bu tercihleri uygulamadan değiştirebilir. <span class="placeholder">[BU HASSAS VERİLERİN İŞLENMESİ İÇİN HUKUKİ DAYANAK VE UYGULAMA İÇİ AÇIK BİLGİLENDİRME / ONAY AKIŞINI DOĞRULAYIN]</span></p>
+<p>Maidee'nin tarif ve besin bilgileri genel bilgilendirme amaçlıdır; tıbbi tanı, tedavi veya kişiye özel doktor/diyetisyen önerisi yerine geçmez. Özellikle kronik hastalıklarla ilişkili diyet değişikliklerinde sağlık uzmanına danışılmalıdır.</p>
+<h2>5. Reklamlar ve ücretli özellikler</h2>
+<p>İncelenen Flutter proje bağımlılıklarında reklam veya abonelik/ödeme SDK'sı bulunmamıştır. Bu özellikler gelecekte eklenirse, reklam sağlayıcısı, reklam tanımlayıcıları, kullanım verileri, ödeme/abonelik kayıtları ve olası üçüncü taraf paylaşımları hakkında bu politika yayın öncesinde güncellenecektir. <span class="placeholder">[REKLAM AKTİF Mİ? SAĞLAYICI/SDK? KİŞİSELLEŞTİRİLMİŞ REKLAM? ABONELİK AKTİF Mİ? ÖDEME SAĞLAYICISI?]</span></p>
+<p>Reklam veya abonelik yalnızca ürün planında bulunuyor ve yayınlanan sürümde mevcut değilse, Play Console beyanları mevcut sürümün gerçek davranışına göre doldurulmalıdır.</p>
+<h2>6. Üçüncü taraf hizmetler</h2>
+<p>Kaynak kod incelemesi aşağıdaki hizmetlere işaret etmektedir: Google Gemini API (AI metin/görsel işleme), Google Cloud Run (uygulama backend'i), Firebase App Check ve Google Play Integrity (uygulama bütünlüğü doğrulama). <span class="placeholder">[CANLI SERVİSLERİ VE BAĞLANTILI SAĞLAYICI GİZLİLİK POLİTİKALARINI DOĞRULAYIN]</span></p>
+<p>Bu hizmetler, görevlerini yerine getirmek amacıyla kendilerine aktarılan verileri kendi koşulları ve geçerli hukuka göre işleyebilir. Üçüncü tarafların saklama ve paylaşım davranışları canlı ortamda ayrıca doğrulanmalıdır.</p>
+<h2 id="saklama">7. Saklama, güvenlik ve silme</h2>
+<p>Profil, tercihler ve çeşitli liste/favori verileri cihazdaki SharedPreferences alanında tutulur; incelenen kodda bunlar için uygulama katmanında özel bir şifreleme görünmemiştir. Fotoğrafın uygulama tarafından kalıcı olarak saklandığı görülmemiştir. Backend istek içeriklerini veritabanına kaydetmemektedir; hata logları ve sağlayıcı kayıtları ayrıca incelenmelidir.</p>
+<p>Profil fotoğrafını kaldırma, tercihlerde değişiklik yapma ve favorileri silme gibi kısmi silme yolları vardır. İncelenen sürümde bütün yerel verileri tek seferde silen bir özellik veya kullanıcı hesabı oluşturma/giriş sistemi bulunmamıştır. <span class="placeholder">[YEREL VERİLERİN TOPLU SİLİNMESİ, YEDEKLEME/Gerİ YÜKLEME, SAĞLAYICI VERİ SAKLAMA SÜRELERİ VE SİLME TALEBİ SÜRECİ BELİRLENECEK]</span></p>
+<p>Kullanıcılar gizlilik taleplerini aşağıdaki iletişim kanalına iletebilir: <span class="placeholder">maidee.info@gmail.com</span>. <span class="placeholder">[TALEP YANIT SÜRESİ VE SİLME PROSEDÜRÜ]</span></p>
+<h2>8. Uygulama izinleri</h2>
+<p>Fotoğraf seçimi/çekimi kullanıcı eylemiyle başlatılır. İncelenen derlenmiş Android manifestinde kalıcı kamera, konum, mikrofon veya geniş depolama izni tespit edilmemiştir. Sistem fotoğraf seçici veya kamera bileşenleri cihaz sürümüne ve kullanılan eklentiye göre farklı izinler kullanabilir. İnternet erişimi, yapay zekâ hizmetine bağlantı için kullanılır.</p>
+<h2 id="haklar">9. Kullanıcı hakları</h2>
+<p>Geçerli mevzuata (uygulanabilir olduğunda KVKK ve ilgili diğer veri koruma kuralları) göre kişisel verileriniz hakkında bilgi alma, düzeltme, silme ve diğer yasal haklarınızı kullanmak için <span class="placeholder">maidee.info@gmail.com</span> adresinden bize ulaşabilirsiniz. Hakların kapsamı ve işlemenin hukuki dayanağı bulunduğunuz ülkeye ve işlemeye göre değişebilir.</p>
+<h2>10. Çocukların gizliliği</h2>
+<p><span class="placeholder">[HEDEF YAŞ GRUBU, ÇOCUKLARA YÖNELİK OLUP OLMADIĞI, GEREKLİ EBEVEYN İZNİ VE YAŞ SINIRI DOĞRULANACAK]</span></p>
+<h2>11. Uluslararası veri aktarımı</h2>
+<p>Google'ın bulut ve yapay zekâ hizmetlerine aktarım, kullanıcının bulunduğu ülke dışında veri işlenmesine yol açabilir. <span class="placeholder">[GERÇEK İŞLEME BÖLGELERİ, HUKUKİ MEKANİZMA VE AKTARIM GÜVENCELERİ DOĞRULANACAK]</span></p>
+<h2>12. Değişiklikler ve iletişim</h2>
+<p>Hizmetler veya yasal yükümlülükler değişirse bu politika güncellenebilir; son güncelleme tarihi sayfanın üstünde gösterilir. Sorular ve talepler için: <span class="placeholder">maidee.info@gmail.com</span>.</p>
+</main><footer>© Maidee · Gizlilik Politikası</footer>
+</body></html>
